@@ -1,0 +1,23 @@
+section.brands
+  +container
+  background-image: url('img/bg-grain.jpg')
+  padding-top: em(40px)
+  padding-bottom: em(40px)
+  .brand
+    padding-bottom: span(6 of 12)
+    margin-bottom: +gutters(6)
+    +gallery(6 of 12)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    position: relative
+    +breakpoint($large-screen)
+      padding-bottom: 33%
+      margin-bottom: +gutters(12)
+      +gallery(3 of 12)
+    a
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0

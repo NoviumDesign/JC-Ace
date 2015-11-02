@@ -1,0 +1,32 @@
+/*!
+Theme Name: jc-ace
+Author: Anton Kjörck Lindén
+Author URI: http://www.noviumdesign.se
+Description: -
+Version: 1.0.0
+License: Private
+Text Domain: jc-ace
+*/
+
+@import "mixins/mixins-master";
+@import "normalize";
+
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/susy/sass/susy";
+@import "../bower_components/compass-breakpoint/stylesheets/breakpoint";
+
+@import "base/base";
+
+@import "components/navigation/desktop";
+@import "components/header";
+
+@import "views/intro";
+@import "views/profile";
+@import "views/brands";
+@import "views/single-brands";
+
+@import "modules/accessibility";
+@import "modules/alignments";
+@import "modules/clearings";
+@import "modules/infinite-scroll";
+@import "media/media";

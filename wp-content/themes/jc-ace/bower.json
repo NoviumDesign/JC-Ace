@@ -1,0 +1,20 @@
+{
+  "name": "JC-ACE",
+  "version": "1.0.0",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "license": "Private",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.6",
+    "bourbon": "~4.2.6",
+    "compass-breakpoint": "~2.6.1"
+  }
+}
