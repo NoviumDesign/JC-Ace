@@ -6,23 +6,28 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="intro min-height-100">
-        <div class="valign-wrapper height-100">
-          <div class="valign">
-            <h1>JC launches JC(ACE)</h1>
+        <div class="container">
+          <div class="valign-wrapper height-100">
+            <div class="valign">
+              <h1>JC launches JC(ACE)</h1>
+            </div>
+          </div>
+          <div class="scroll-to-explore">
+            <a href="#profile">Scroll to explore</a>
           </div>
         </div>
 			</div>
 
       <div class="profile min-height-100 container" id="profile">
-        <div class="valign-wrapper min-height-100">
-          <div class="valign">
-      			<?php while ( have_posts() ) : the_post(); ?>
+          <div class="valign-wrapper min-height-100">
+            <div class="valign">
+        			<?php while ( have_posts() ) : the_post(); ?>
 
-      				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+        				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-      			<?php endwhile; // End of the loop. ?>
+        			<?php endwhile; // End of the loop. ?>
+            </div>
           </div>
-        </div>
       </div>
 
       <section class="brands container" id="brands">

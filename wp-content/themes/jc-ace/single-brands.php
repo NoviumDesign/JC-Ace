@@ -45,7 +45,17 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<?php the_content(); ?>
+						<div class="first-row">
+							<div class="first-box">
+							</div>
+							<div class="second-box">
+							</div>
+						</div>
+
+						<div class="image-grid">
+							<?php the_content(); ?>
+						</div>
+
 						<?php
 							wp_link_pages( array(
 								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),

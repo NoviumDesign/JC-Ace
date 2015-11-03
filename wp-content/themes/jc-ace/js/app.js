@@ -113,6 +113,15 @@ $(function() {
 } )();
 
 
+/* -------- js/one-page-nav.js -------- */ 
+
+$(function() {
+  $('#site-navigation').onePageNav({
+      currentClass: 'active',
+      scrollThreshold: 0.28
+  });
+});
+
 /* -------- js/skip-link-focus-fix.js -------- */ 
 
 /**
