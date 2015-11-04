@@ -45,7 +45,6 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-<<<<<<< HEAD
 
 						<div class="single-brand-content container">
 

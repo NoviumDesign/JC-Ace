@@ -12,11 +12,11 @@ get_header(); ?>
               <h1>JC launches JC(ACE)</h1>
             </div>
           </div>
-          <div class="scroll-to-explore">
+          <!-- <div class="scroll-to-explore">
             <a href="#profile">Scroll to explore</a>
-          </div>
+          </div> -->
         </div>
-        <div class="scroll">Scroll to explore</div>
+        <div class="scroll"><a href="#profile">Scroll to explore</a></div>
 			</div>
 
       <div class="profile min-height-100 container" id="profile">
