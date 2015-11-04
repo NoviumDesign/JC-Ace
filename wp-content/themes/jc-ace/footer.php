@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
     <div class="footer-top container">
-      <div class="footer-navigation">
+      <div class="footer-navigation" id="footer-navigation">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
       </div>
 
@@ -41,7 +41,7 @@
           <li><a href="mailto:info@jc.se">info@jc.se</a></li>
         </ul>
       </div>
-      <div class="copyright-information">
+      <div class="copyright-information container">
         <span>© JC(ACE) 2015. All rights reserved</span>
       </div>
     </div>

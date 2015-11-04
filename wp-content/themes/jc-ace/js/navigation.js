@@ -43,6 +43,7 @@
 		}
 	};
 
+	// Close menu when pressing a link
 	$('#site-navigation a').click(function() {
 		container.className = container.className.replace( ' toggled', '' );
 		button.setAttribute( 'aria-expanded', 'false' );

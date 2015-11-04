@@ -16,20 +16,22 @@ get_header(); ?>
             <a href="#profile">Scroll to explore</a>
           </div> -->
         </div>
-        <div class="scroll"><a href="#profile">Scroll to explore</a></div>
+        <div class="scroll" id="scroll-navigation"><a href="#profile">Scroll to explore</a></div>
 			</div>
 
-      <div class="profile min-height-100 container" id="profile">
-          <div class="valign-wrapper min-height-100">
-            <div class="valign">
-        			<?php while ( have_posts() ) : the_post(); ?>
+      <section id="profile">
+        <div class="profile min-height-100 container">
+            <div class="valign-wrapper min-height-100">
+              <div class="valign">
+          			<?php while ( have_posts() ) : the_post(); ?>
 
-        				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+          				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-        			<?php endwhile; // End of the loop. ?>
+          			<?php endwhile; // End of the loop. ?>
+              </div>
             </div>
-          </div>
-      </div>
+        </div>
+      </section>
 
       <section class="brands container" id="brands">
         <h2>Explore our brands</h2>
@@ -46,7 +48,7 @@ get_header(); ?>
           </div>
       </section>
 
-      <section class="stores container">
+      <section class="stores container" id="stores">
         <h2>Store locator</h2>
 
         <div class="store-wrap">

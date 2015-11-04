@@ -2,3 +2,5 @@
 bower_components
 node_modules
 wp-content/themes/jc-ace/js/app.js
+*.css
+*.css.map

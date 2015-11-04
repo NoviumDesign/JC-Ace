@@ -67,12 +67,20 @@ $(function() {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
+		} 
+		else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
+
+	// Close menu when pressing a link
+	$('#site-navigation a').click(function() {
+		container.className = container.className.replace( ' toggled', '' );
+		button.setAttribute( 'aria-expanded', 'false' );
+		menu.setAttribute( 'aria-expanded', 'false' );
+	});
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
@@ -116,9 +124,10 @@ $(function() {
 /* -------- js/one-page-nav.js -------- */ 
 
 $(function() {
-  $('#site-navigation').onePageNav({
+  $('#site-navigation, #footer-navigation, #scroll-navigation').onePageNav({
       currentClass: 'active',
-      scrollThreshold: 0.28
+      scrollThreshold: 0.28,
+      scrollSpeed: 250
   });
 });
 

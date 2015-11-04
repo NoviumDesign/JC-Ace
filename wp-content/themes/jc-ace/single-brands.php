@@ -48,7 +48,60 @@ get_header(); ?>
 
 						<div class="single-brand-content container">
 
-							<!-- First brand image -->
+							<div class="brand-text">
+								<?php the_content(); ?>
+								<?php
+									wp_link_pages( array(
+										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),
+										'after'  => '</div>',
+									) );
+								?>
+							</div>
+
+							<div class="image-container">
+
+								<!-- First brand image -->
+								<?php 
+
+									$first_image = get_field('brand_image_1');
+
+								if( !empty($first_image) ): ?>
+
+									<div class="image-column">
+										<img src="<?php echo $first_image['url']; ?>" alt="<?php echo $first_image['alt']; ?>" />
+									</div>
+
+								<?php endif; ?>
+
+								<!-- second brand image -->
+								<?php 
+
+									$second_image = get_field('brand_image_2');
+
+								if( !empty($second_image) ): ?>
+
+									<div class="image-column">
+										<img src="<?php echo $second_image['url']; ?>" alt="<?php echo $second_image['alt']; ?>" />
+									</div>
+
+								<?php endif; ?>
+
+								<!-- third brand image -->
+								<?php 
+
+									$third_image = get_field('brand_image_3');
+
+								if( !empty($third_image) ): ?>
+
+									<div class="image-full-width">
+										<img src="<?php echo $third_image['url']; ?>" alt="<?php echo $third_image['alt']; ?>" />
+									</div>
+
+								<?php endif; ?>
+
+							</div>
+
+							<!-- old version
 							<?php 
 
 								$first_image = get_field('brand_image_1');
@@ -61,7 +114,7 @@ get_header(); ?>
 
 							<?php endif; ?>
 
-							<!-- brand text -->
+							
 							<div class="content-box brand-text">
 								<?php the_content(); ?>
 								<?php
@@ -72,7 +125,7 @@ get_header(); ?>
 								?>
 							</div>
 							
-							<!-- second brand image -->
+							
 							<?php 
 
 								$second_image = get_field('brand_image_2');
@@ -85,7 +138,7 @@ get_header(); ?>
 
 							<?php endif; ?>
 							
-							<!-- third brand image -->
+							
 							<?php 
 
 								$third_image = get_field('brand_image_3');
@@ -98,27 +151,9 @@ get_header(); ?>
 
 							<?php endif; ?>
 
+							-->
+
 						</div>
-
-						<!-- from commit on Nov 3, 2015 "Design fixes" 
-							<div class="first-row">
-								<div class="first-box">
-								</div>
-								<div class="second-box">
-								</div>
-							</div>
-
-							<div class="image-grid">
-								<?php the_content(); ?>
-							</div>
-
-							<?php
-								wp_link_pages( array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),
-									'after'  => '</div>',
-								) );
-							?>
-						-->
 
 					</div><!-- .entry-content -->
 

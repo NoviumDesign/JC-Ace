@@ -10,9 +10,6 @@ $copyright-color: #8D8D8D
     list-style-type: none
     margin: 0
 
-    +breakpoint($medium-screen)
-      margin-top: em(12px)
-
   a, li, span
     text-transform: uppercase
     font-family: $heading-font-family
@@ -27,6 +24,9 @@ $copyright-color: #8D8D8D
     float: left
 
     +breakpoint($medium-screen) 
+      ul
+        margin-top: em(12px)
+
       li 
         float: left
         display: inline-block
