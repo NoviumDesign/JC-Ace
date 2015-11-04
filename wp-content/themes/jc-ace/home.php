@@ -11,6 +11,7 @@ get_header(); ?>
             <h1>JC launches JC(ACE)</h1>
           </div>
         </div>
+        <div class="scroll">Scroll to explore</div>
 			</div>
 
       <div class="profile min-height-100 container" id="profile">
@@ -33,14 +34,47 @@ get_header(); ?>
       				$loop = new WP_Query( $args );
       				while ( $loop->have_posts() ) : $loop->the_post();
       			?>
-      				<div class="brand" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>')">
-                <a href="<?php the_permalink( $post->ID ); ?>">
-                </a>
-      				</div>
+      				<a href="<?php the_permalink( $post->ID ); ?>" class="brand" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>')">
+      				</a>
 
       			<?php endwhile; ?>
           </div>
       </section>
+
+      <section class="stores container">
+        <h2>Store locator</h2>
+
+        <div class="store-wrap">
+          <div class="store-info">
+            <span>JC(ACE) Concept Store</span> <!-- Decide what heading to use later -->
+            <ul>
+              <li>Arenastaden 22</li>
+              <li>187 23 Stockholm</li>
+              <li>08-21 24 229</li>
+              <li><a href="mailto:arenastaden@jc.se">arenastaden@jc.se</a></li>
+            </ul>
+          </div>
+          <div class="store-info">
+            <span>Opening hours</span> <!-- Decide what heading to use later -->
+            <ul>
+              <li>M-F: 10.00-20.00</li>
+              <li>SA: 10.00-18.00</li>
+              <li>SU: 11.00-16.00</li>
+            </ul>
+          </div>
+          <div class="store-info">
+            <span>Get to the store</span> <!-- Decide what heading to use later -->
+            <p>Subway station Solna Centrum or bus station Friends Arena</p>
+            <p>
+              By Car<br>
+              There are lots of parkings slots in connection to Friends Arena. Space can be limited on sport and show events at Friends Arena.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="map"></section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

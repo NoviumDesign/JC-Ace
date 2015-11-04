@@ -34,7 +34,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; // End header image check. ?>
 		</div>
-		<button class="menu-toggle" id="button-menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jc-ace' ); ?></button>
+		<button class="menu-toggle" id="button-menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', 'jc-ace' ); ?></button>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->

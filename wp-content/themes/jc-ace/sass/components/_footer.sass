@@ -1,0 +1,65 @@
+$footer-top-color: #29292E
+$footer-bottom-color: #222227
+$copyright-color: #8D8D8D
+
+.site-footer
+
+  ul
+    +clearfix
+    padding: 0
+    list-style-type: none
+    margin: 0
+
+    +breakpoint($medium-screen)
+      margin-top: em(12px)
+
+  a, li, span
+    text-transform: uppercase
+    font-family: $heading-font-family
+
+  .footer-top
+    +container
+    background-color: $footer-top-color
+    padding-top: em(20px)
+    padding-bottom: em(20px)
+
+  .footer-navigation
+    float: left
+
+    +breakpoint($medium-screen) 
+      li 
+        float: left
+        display: inline-block
+        margin-right: em(20px)
+
+        &:last-child
+          margin-right: 0
+
+  .footer-logo
+    float: right
+
+  .footer-bottom
+    +container
+    padding-top: em(20px)
+    padding-bottom: em(20px)
+    position: relative
+    background-color: $footer-bottom-color
+
+    .contact-information
+      float: left
+
+      a, li, span
+        color: $copyright-color
+
+    .copyright-information
+      float: left
+      font-family: $heading-font-family
+      color: $medium-gray
+      margin-top: em(12px)
+
+      +breakpoint($medium-screen)
+        position: absolute
+        bottom: 0
+        right: 0
+        margin-bottom: em(20px)
+        padding-right: 10px

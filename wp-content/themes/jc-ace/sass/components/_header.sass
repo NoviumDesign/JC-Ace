@@ -6,9 +6,19 @@
   top: 0
   left: 0
   right: 0
-  z-index: 9998
+  z-index: 9
+
   &.fixed
     background-color: #000000
 
 .site-branding
+  position: relative
   float: left
+  z-index: 99
+
++breakpoint($mobile-only)
+  .site-branding
+    display: none
+
+  .fixed .site-branding
+    display: block

@@ -45,13 +45,61 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),
-								'after'  => '</div>',
-							) );
-						?>
+
+						<div class="single-brand-content container">
+
+							<!-- First brand image -->
+							<?php 
+
+								$first_image = get_field('brand_image_1');
+
+							if( !empty($first_image) ): ?>
+
+								<div class="content-box">
+									<img src="<?php echo $first_image['url']; ?>" alt="<?php echo $first_image['alt']; ?>" />
+								</div>
+
+							<?php endif; ?>
+
+							<!-- brand text -->
+							<div class="content-box brand-text">
+								<?php the_content(); ?>
+								<?php
+									wp_link_pages( array(
+										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),
+										'after'  => '</div>',
+									) );
+								?>
+							</div>
+							
+							<!-- second brand image -->
+							<?php 
+
+								$second_image = get_field('brand_image_2');
+
+							if( !empty($second_image) ): ?>
+
+								<div class="content-box">
+									<img src="<?php echo $second_image['url']; ?>" alt="<?php echo $second_image['alt']; ?>" />
+								</div>
+
+							<?php endif; ?>
+							
+							<!-- third brand image -->
+							<?php 
+
+								$third_image = get_field('brand_image_3');
+
+							if( !empty($third_image) ): ?>
+
+								<div class="content-box">
+									<img src="<?php echo $third_image['url']; ?>" alt="<?php echo $third_image['alt']; ?>" />
+								</div>
+
+							<?php endif; ?>
+
+						</div>
+
 					</div><!-- .entry-content -->
 
 				</article><!-- #post-## -->

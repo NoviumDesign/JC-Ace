@@ -6,11 +6,44 @@
     position: relative
 
     h1
-      text-align: center
-      font-size: em(57px)
+      font-size: $huge-heading-font-size * 0.5
       text-transform: uppercase
 
+      +breakpoint($medium-screen)
+        font-size: $huge-heading-font-size
+        text-align: center
+
     .brand-intro
-      position: absolute
-      bottom: em(40px)
-      max-width: 35%
+      display: inline-block
+      margin-bottom: em(20px)
+
+      +breakpoint($medium-screen)
+        position: absolute
+        bottom: em(40px)
+        max-width: 35%
+
+.single-brand-content
+  +container
+  padding-top: +gutter()
+
+  .content-box
+    +span(full)
+
+    +breakpoint($medium-screen)
+      margin-bottom: gutter(6)
+
+      p
+        max-width: 80%
+
+      &:nth-child(1n+3)
+        +gallery(6 of 12 0.75)
+
+    +breakpoint($large-screen)
+      +gallery(6 of 12 0.75)
+
+      p
+        max-width: 100%
+
+    img
+      display: block
+      width: 100%

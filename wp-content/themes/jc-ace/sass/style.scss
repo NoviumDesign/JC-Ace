@@ -17,12 +17,16 @@ Text Domain: jc-ace
 
 @import "base/base";
 
+@import "components/navigation/mobile";
 @import "components/navigation/desktop";
 @import "components/header";
+@import "components/footer";
 
 @import "views/intro";
 @import "views/profile";
 @import "views/brands";
+@import "views/stores";
+@import "views/map";
 @import "views/single-brands";
 
 @import "modules/accessibility";

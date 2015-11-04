@@ -4,6 +4,9 @@ $heading-font-family: 'JCBeta04-Bold', $helvetica;
 
 // Font Sizes
 $base-font-size: 1em;
+$huge-heading-font-size: em(150px);
+$large-heading-font-size: em(57px);
+$heading-font-size: em(42px);
 
 // Line height
 $base-line-height: 1.5;
@@ -23,7 +26,8 @@ $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: #FFFFFF;
-$action-color: $blue;
+$action-color: $base-font-color;
+$action-hover-color: darken($base-font-color, 25%);
 
 // Border
 $base-border-color: $light-gray;
