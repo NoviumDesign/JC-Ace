@@ -45,6 +45,7 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
+<<<<<<< HEAD
 
 						<div class="single-brand-content container">
 
@@ -99,6 +100,26 @@ get_header(); ?>
 							<?php endif; ?>
 
 						</div>
+
+						<!-- from commit on Nov 3, 2015 "Design fixes" 
+							<div class="first-row">
+								<div class="first-box">
+								</div>
+								<div class="second-box">
+								</div>
+							</div>
+
+							<div class="image-grid">
+								<?php the_content(); ?>
+							</div>
+
+							<?php
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),
+									'after'  => '</div>',
+								) );
+							?>
+						-->
 
 					</div><!-- .entry-content -->
 
