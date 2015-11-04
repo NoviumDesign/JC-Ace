@@ -17,11 +17,11 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 0.275em;
-  text-transform: uppercase;
 }
 
 h1 {
   font-size: $large-heading-font-size * 0.8;
+  text-decoration: uppercase;
 
   @include breakpoint($medium-screen) {
     font-size: $large-heading-font-size;

@@ -10,6 +10,7 @@ get_header(); ?>
           <div class="valign-wrapper height-100">
             <div class="valign">
               <h1>JC launches JC(ACE)</h1>
+              <h2>”the no.1 denim destination for a fashionforward lifestyle with the best brands first”</h2>
             </div>
           </div>
           <!-- <div class="scroll-to-explore">
