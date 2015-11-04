@@ -23,7 +23,7 @@ get_header(); ?>
 					<header class="entry-header min-height-100" style="background-image: url('<?php echo get_field( "brand-top-image" ); ?>')">
 						<div class="container">
 			        <div class="valign-wrapper min-height-100">
-			          <div class="valign">					
+			          <div class="valign height-100">					
 									<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 									<?php
 										edit_post_link(
