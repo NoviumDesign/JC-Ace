@@ -40,10 +40,13 @@ $copyright-color: #8D8D8D
 
   .footer-bottom
     +container
+    background-color: $footer-bottom-color
     padding-top: em(20px)
     padding-bottom: em(20px)
-    position: relative
-    background-color: $footer-bottom-color
+
+    .footer-content
+      +clearfix
+      position: relative
 
     .contact-information
       float: left
@@ -61,5 +64,3 @@ $copyright-color: #8D8D8D
         position: absolute
         bottom: 0
         right: 0
-        margin-bottom: em(20px)
-        padding-right: 10px

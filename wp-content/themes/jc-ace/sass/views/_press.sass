@@ -1,0 +1,23 @@
+.press-header
+  background-position: center top
+  background-size: cover
+  text-align: center
+  padding: 250px 0
+
+.press-content
+  +container
+  padding-top: em(40px)
+  padding-bottom: em(40px)
+
+.press-text
+  +span(full)
+  text-transform: uppercase
+  font-family: $heading-font-family
+  margin-bottom: em(20px)
+
+  +breakpoint($medium-screen)
+    +span(7 of 12)
+
+  .press-link
+    float: left
+    clear: left

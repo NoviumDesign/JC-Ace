@@ -101,58 +101,6 @@ get_header(); ?>
 
               </div>
 
-              <!-- old version
-              <?php 
-
-                $first_image = get_field('brand_image_1');
-
-              if( !empty($first_image) ): ?>
-
-                <div class="content-box">
-                  <img src="<?php echo $first_image['url']; ?>" alt="<?php echo $first_image['alt']; ?>" />
-                </div>
-
-              <?php endif; ?>
-
-              
-              <div class="content-box brand-text">
-                <?php the_content(); ?>
-                <?php
-                  wp_link_pages( array(
-                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jc-ace' ),
-                    'after'  => '</div>',
-                  ) );
-                ?>
-              </div>
-              
-              
-              <?php 
-
-                $second_image = get_field('brand_image_2');
-
-              if( !empty($second_image) ): ?>
-
-                <div class="content-box">
-                  <img src="<?php echo $second_image['url']; ?>" alt="<?php echo $second_image['alt']; ?>" />
-                </div>
-
-              <?php endif; ?>
-              
-              
-              <?php 
-
-                $third_image = get_field('brand_image_3');
-
-              if( !empty($third_image) ): ?>
-
-                <div class="content-box">
-                  <img src="<?php echo $third_image['url']; ?>" alt="<?php echo $third_image['alt']; ?>" />
-                </div>
-
-              <?php endif; ?>
-
-              -->
-
             </div>
 
           </div><!-- .entry-content -->

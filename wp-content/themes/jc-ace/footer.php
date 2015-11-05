@@ -32,17 +32,19 @@
     </div>
 
     <div class="footer-bottom container">
-      <div class="contact-information">
-        <span>JC(ACE) Concept Store</span> <!-- Decide what heading to use later -->
-        <ul>
-          <li>Arenastaden 22</li>
-          <li>187 23 Stockholm</li>
-          <li>08-21 24 229</li>
-          <li><a href="mailto:info@jc.se">info@jc.se</a></li>
-        </ul>
-      </div>
-      <div class="copyright-information container">
-        <span>© JC(ACE) 2015. All rights reserved</span>
+      <div class="footer-content">
+        <div class="contact-information">
+          <span>JC(ACE) Concept Store</span> <!-- Decide what heading to use later -->
+          <ul>
+            <li>Arenastaden 22</li>
+            <li>187 23 Stockholm</li>
+            <li>08-21 24 229</li>
+            <li><a href="mailto:info@jc.se">info@jc.se</a></li>
+          </ul>
+        </div>
+        <div class="copyright-information">
+          <span>© JC(ACE) 2015. All rights reserved</span>
+        </div>
       </div>
     </div>
 
