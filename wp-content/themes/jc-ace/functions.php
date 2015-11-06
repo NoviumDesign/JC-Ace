@@ -114,9 +114,21 @@ function create_posttype() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'brands'),
-      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes' ),
     )
   );
+}
+
+// Change thumb size
+update_option( 'thumbnail_size_w', 579 );
+update_option( 'thumbnail_size_h', 805 );
+update_option( 'thumbnail_crop', 1 );
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
 }
 
 // Show posts of 'post', 'page' and 'movie' post types on home page

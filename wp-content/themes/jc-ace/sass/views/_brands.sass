@@ -1,29 +1,27 @@
 section.brands
   +container
-  padding-top: em(40px)
-  padding-bottom: em(40px)
+  padding-top: em(80px)
+  padding-bottom: em(80px)
 
   +breakpoint($mobile-only)
-    margin-top: -$header-height
+    margin-top: -79px
     padding-top: 40px + $header-height
 
   .brand
-    padding-bottom: span(6 of 12)
-    margin-bottom: +gutters(6)
-
     +gallery(6 of 12)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: cover
-    position: relative
+    margin-bottom: +gutters(12)
 
     +breakpoint($large-screen)
-      padding-bottom: 33%
-      margin-bottom: +gutters(12)
       +gallery(3 of 12)
 
     &:hover
       opacity: 0.75
+    img
+      display: block
 
   h2
-    text-align: center
+    +breakpoint($mobile-only)
+      padding-bottom: 5px
+    border-bottom: 1px solid #FFFFFF
+    padding-bottom: 7px
+    margin-bottom: 30px

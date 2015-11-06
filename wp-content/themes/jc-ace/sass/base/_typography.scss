@@ -17,30 +17,41 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 0.275em;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
   font-size: $large-heading-font-size * 0.8;
-  text-decoration: uppercase;
+  line-height: 1;
+  margin-bottom: em(3px);
 
   @include breakpoint($medium-screen) {
     font-size: $large-heading-font-size;
+    margin-bottom: em(1px);
   }
 }
 
 h2 {
   font-size: $heading-font-size * 0.8;
+  line-height: 1;
 
   @include breakpoint($medium-screen) {
     font-size: $heading-font-size;
+    line-height: 0.93;
   }
 }
 
-p {
+p, ul {
   margin: 0 0 $small-spacing;
+  font-size: em(16px);
+  @include breakpoint($medium-screen) {
+    font-size: em(15px);
+  }
 }
 
 a {
+  font-size: 15px;
   color: $action-color;
   text-decoration: none;
   transition: color $base-duration $base-timing;
@@ -67,4 +78,6 @@ picture {
 
 strong {
   font-family: $heading-font-family;
+  font-weight: normal;
+  font-size: em(15px);
 }

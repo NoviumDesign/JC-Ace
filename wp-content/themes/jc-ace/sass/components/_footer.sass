@@ -1,8 +1,15 @@
-$footer-top-color: #29292E
-$footer-bottom-color: #222227
-$copyright-color: #8D8D8D
+$footer-color: #292929
 
 .site-footer
+  background-color: $footer-color
+  -webkit-font-smoothing: antialiased
+  color: #949494
+  & a
+    color: #949494
+
+  strong
+    text-transform: uppercase
+    font-family: $heading-font-family
 
   ul
     +clearfix
@@ -10,18 +17,15 @@ $copyright-color: #8D8D8D
     list-style-type: none
     margin: 0
 
-  a, li, span
-    text-transform: uppercase
-    font-family: $heading-font-family
-
   .footer-top
     +container
-    background-color: $footer-top-color
     padding-top: em(20px)
     padding-bottom: em(20px)
 
   .footer-navigation
-    float: left
+    text-transform: uppercase
+    +breakpoint($mobile-only)
+      margin-top: em(12px)
 
     +breakpoint($medium-screen) 
       ul
@@ -36,11 +40,11 @@ $copyright-color: #8D8D8D
           margin-right: 0
 
   .footer-logo
-    float: right
+    float: left
+    opacity: .45
 
   .footer-bottom
     +container
-    background-color: $footer-bottom-color
     padding-top: em(20px)
     padding-bottom: em(20px)
 
@@ -49,15 +53,12 @@ $copyright-color: #8D8D8D
       position: relative
 
     .contact-information
-      float: left
-
-      a, li, span
-        color: $copyright-color
+      border-bottom: 1px solid
+      padding-bottom: em(19px)
 
     .copyright-information
       float: left
-      font-family: $heading-font-family
-      color: $medium-gray
+      font-size: em(15px)
       margin-top: em(12px)
 
       +breakpoint($medium-screen)

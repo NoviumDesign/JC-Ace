@@ -8,11 +8,18 @@
   +breakpoint($mobile-only)
     padding: 120px 0
 
-  h1, h2
+  h1
     text-align: center
     max-width: 85%
     margin-left: auto
     margin-right: auto
+
+  span
+    text-align: center
+    text-transform: uppercase
+    margin-left: auto
+    margin-right: auto
+    display: block
   
   .scroll
     display: none
@@ -20,19 +27,17 @@
     +breakpoint($medium-screen)
       display: block
       position: absolute
-      bottom: em(40px)
+      bottom: 0
       left: 0
       right: 0
       text-align: center
 
-  // .scroll-to-explore
-  //   position: absolute
-  //   bottom: em(10px)
-  //   text-align: center
-  //   left: 50%
-  //   margin-left: -100px
-  //   a
-  //     display: block
-  //     width: 200px
-  //     padding: em(20px)
-  //     color: #FFFFFF
+    a
+      display: inline-block
+      padding: em(35px)
+      color: #FFFFFF
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGcgaWQ9Imljb21vb24taWdub3JlIj4NCjwvZz4NCjxwYXRoIGQ9Ik01MTIgMjU2YzAtMTQxLjM4NS0xMTQuNjE1LTI1Ni0yNTYtMjU2cy0yNTYgMTE0LjYxNS0yNTYgMjU2IDExNC42MTUgMjU2IDI1NiAyNTYgMjU2LTExNC42MTUgMjU2LTI1NnpNNDggMjU2YzAtMTE0Ljg3NSA5My4xMjUtMjA4IDIwOC0yMDhzMjA4IDkzLjEyNSAyMDggMjA4LTkzLjEyNSAyMDgtMjA4IDIwOC0yMDgtOTMuMTI1LTIwOC0yMDh6IiBmaWxsPSIjRkZGRkZGIj48L3BhdGg+DQo8cGF0aCBkPSJNMTU4LjYyOCAxNzcuMzcybC00NS4yNTYgNDUuMjU2IDE0Mi42MjggMTQyLjYyNyAxNDIuNjI3LTE0Mi42MjgtNDUuMjU0LTQ1LjI1NC05Ny4zNzMgOTcuMzcyeiIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPg0KPC9zdmc+")
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 32px 32px
+      opacity: .4

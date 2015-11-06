@@ -6,10 +6,16 @@
     background-repeat: no-repeat
     background-position: center
     position: relative
+    +breakpoint($mobile-only)
+      padding: 120px 0
+
+    p
+      margin: 0
 
     h1
       font-size: $huge-heading-font-size * 0.5
-      text-transform: uppercase
+      font-family: "JCBeta04-Regular", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+      margin-bottom: 3px
 
       +breakpoint($medium-screen)
         font-size: $huge-heading-font-size
@@ -18,15 +24,22 @@
     .brand-intro
       display: inline-block
       margin-bottom: em(20px)
+      text-transform: uppercase
+      -webkit-font-smoothing: antialiased
+      font-family: $heading-font-family
 
       +breakpoint($medium-screen)
         position: absolute
-        bottom: em(40px)
+        bottom: em(20px)
         max-width: 35%
 
 .single-brand-content
   +container
   padding-top: em(40px)
+  p
+    max-width: em(550px)
+  h2
+    max-width: 500px
 
   .brand-text
     +span(full)
@@ -51,6 +64,7 @@
     +breakpoint($medium-screen)
       .image-column
         +span(6 of 12 0.75)
+        line-height: 0
         margin-bottom: gutter(6)
 
         &:nth-child(2n+2)

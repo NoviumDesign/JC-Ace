@@ -16,10 +16,6 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
     <div class="footer-top container">
-      <div class="footer-navigation" id="footer-navigation">
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-      </div>
-
       <div class="footer-logo">
         <?php if ( get_header_image() ) : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -34,13 +30,16 @@
     <div class="footer-bottom container">
       <div class="footer-content">
         <div class="contact-information">
-          <span>JC(ACE) Concept Store</span> <!-- Decide what heading to use later -->
+          <strong>JC(ACE) Concept Store</strong>
           <ul>
             <li>Arenastaden 22</li>
             <li>187 23 Stockholm</li>
             <li>08-21 24 229</li>
             <li><a href="mailto:info@jc.se">info@jc.se</a></li>
           </ul>
+        </div>
+        <div class="footer-navigation" id="footer-navigation">
+          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
         </div>
         <div class="copyright-information">
           <span>© JC(ACE) 2015. All rights reserved</span>
@@ -52,6 +51,51 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<?php if ( is_front_page() ) { ?>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8aEFRNO2XESRykRoVgK6wy1b-ZTP9Sw8&sensor=false"></script>
+  <script type="text/javascript">
+    (function() {
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var isDraggable = w > 580 ? true : false;
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 15,
+                scrollwheel: false,
+                draggable: isDraggable,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(59.329646, 18.049483),
+
+                disableDefaultUI: true,
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(59.329646, 18.049483),
+                map: map,
+                title: 'JC Ace'
+            });
+        }
+    })();
+  </script>
+<?php } ?>
 
 </body>
 </html>

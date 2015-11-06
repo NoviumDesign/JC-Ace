@@ -10,24 +10,20 @@ get_header(); ?>
           <div class="valign-wrapper height-100">
             <div class="valign">
               <h1>JC launches JC(ACE)</h1>
-              <h2>The no.1 denim destination for a fashionforward lifestyle with the best brands first</h2>
+              <span>The no.1 denim destination for a fashionforward lifestyle with the best brands first</span>
             </div>
           </div>
         </div>
-        <div class="scroll" id="scroll-navigation"><a href="#profile">Scroll to explore</a></div>
+        <div class="scroll" id="scroll-navigation"><a href="#profile"></a></div>
 			</div>
 
       <section id="profile">
         <div class="profile min-height-100 container">
-            <div class="valign-wrapper min-height-100">
-              <div class="valign">
-          			<?php while ( have_posts() ) : the_post(); ?>
+    			<?php while ( have_posts() ) : the_post(); ?>
 
-          				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+    				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-          			<?php endwhile; // End of the loop. ?>
-              </div>
-            </div>
+    			<?php endwhile; // End of the loop. ?>
         </div>
       </section>
 
@@ -39,7 +35,8 @@ get_header(); ?>
       				$loop = new WP_Query( $args );
       				while ( $loop->have_posts() ) : $loop->the_post();
       			?>
-      				<a href="<?php the_permalink( $post->ID ); ?>" class="brand" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>')">
+      				<a href="<?php the_permalink( $post->ID ); ?>" class="brand">
+                <?php the_post_thumbnail( 'thumbnail' ); ?>
       				</a>
 
       			<?php endwhile; ?>
@@ -51,16 +48,14 @@ get_header(); ?>
 
         <div class="store-wrap">
           <div class="store-info">
-            <span>JC(ACE) Concept Store</span> <!-- Decide what heading to use later -->
+            <strong>JC(ACE) Concept Store</strong>
             <ul>
               <li>Arenastaden 22</li>
               <li>187 23 Stockholm</li>
               <li>08-21 24 229</li>
               <li><a href="mailto:arenastaden@jc.se">arenastaden@jc.se</a></li>
             </ul>
-          </div>
-          <div class="store-info">
-            <span>Opening hours</span> <!-- Decide what heading to use later -->
+            <strong>Opening hours</strong>
             <ul>
               <li>M-F: 10.00-20.00</li>
               <li>SA: 10.00-18.00</li>
@@ -68,10 +63,10 @@ get_header(); ?>
             </ul>
           </div>
           <div class="store-info">
-            <span>Get to the store</span> <!-- Decide what heading to use later -->
+            <strong>Get to the store by public transport</strong>
             <p>Subway station Solna Centrum or bus station Friends Arena</p>
             <p>
-              By Car<br>
+              <strong>Get to the store by car</strong><br>
               There are lots of parkings slots in connection to Friends Arena. Space can be limited on sport and show events at Friends Arena.
             </p>
           </div>
@@ -79,7 +74,7 @@ get_header(); ?>
 
       </section>
 
-      <section class="map"></section>
+      <section id="map" class="map"></section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

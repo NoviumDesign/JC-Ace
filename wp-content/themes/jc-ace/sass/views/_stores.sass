@@ -1,42 +1,47 @@
+.stores
+  h2
+    border-bottom: 1px solid #FFFFFF
+    padding-bottom: 7px
+    margin-bottom: 15px
+    +breakpoint($medium-screen)
+      margin-bottom: 30px
+
 +breakpoint($mobile-only)
   .stores
-    margin-top: -$header-height
+    margin-top: -165px
     padding-top: 40px + $header-height
 
 .store-wrap
   +container
-  padding-bottom: em(40px)
+  padding-bottom: em(43px)
 
 .store-info
-  +span(full)
   margin-bottom: em(20px)
+  padding-top: em(10px)
 
   +breakpoint($medium-screen)
-    +span(4 of 12)
+    float: left
+    padding-right: em(70px)
     border-right: 1px solid white
-    padding-right: gutter(12)
     box-sizing: border-box // This is to align the white border with brands over
     margin-bottom: 0
 
     &:last-child
-      +span(4 of 12 last)
       border-right: none
+      margin-left: em(30px)
 
   +breakpoint($large-screen)
-    +span(3 of 12)
-    min-height: 260px
+    min-height: 250px
 
     &:last-child
       +span(4 of 12)
 
   ul
     padding: 0
-    margin: 0
     list-style-type: none
 
-  li, p, span
+  strong
     text-transform: uppercase
-    font-family: $heading-font-family
 
   p:last-child
     margin-bottom: 0
