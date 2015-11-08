@@ -86,18 +86,20 @@ get_header(); ?>
 
                 <?php endif; ?>
 
-                <!-- third brand image -->
-                <?php 
+              </div>
 
-                  $third_image = get_field('brand_image_3');
+              <!-- Product grid -->
 
-                if( !empty($third_image) ): ?>
+              <div class="product-grid">
 
-                  <div class="image-full-width">
-                    <img src="<?php echo $third_image['url']; ?>" alt="<?php echo $third_image['alt']; ?>" />
-                  </div>
-
-                <?php endif; ?>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product1-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product2-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product3-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product4-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product5-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product6-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product7-579x805.jpg"></div>
+                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product8-579x805.jpg"></div>
 
               </div>
 

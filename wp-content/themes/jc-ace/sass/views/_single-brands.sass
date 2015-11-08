@@ -53,19 +53,30 @@
 
   .image-container
     +span(full)
-    margin-bottom: gutter(6)
 
-    .image-column, .image-full-width
+    .image-column
       +span(full)
+      margin-bottom: gutter(6)
 
       img
         width: 100%
 
-    +breakpoint($medium-screen)
-      .image-column
+      +breakpoint($medium-screen)
         +span(6 of 12 0.75)
         line-height: 0
-        margin-bottom: gutter(6)
 
         &:nth-child(2n+2)
           +span(6 of 12 0.75 last)
+
+  .product-grid
+    +span(full)
+
+    .product
+      +gallery(6 of 12 0.75)
+      margin-bottom: gutter(6)
+
+      +breakpoint($medium-screen)
+        +gallery(4 of 12 0.75)
+
+      +breakpoint($large-screen)
+        +gallery(3 of 12 0.75)
