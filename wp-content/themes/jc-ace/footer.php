@@ -30,12 +30,13 @@
     <div class="footer-bottom container">
       <div class="footer-content">
         <div class="contact-information">
-          <strong>JC(ACE) Concept Store</strong>
+          <strong>JC(ACE) Store</strong>
           <ul>
-            <li>Arenastaden 22</li>
-            <li>187 23 Stockholm</li>
-            <li>08-21 24 229</li>
-            <li><a href="mailto:info@jc.se">info@jc.se</a></li>
+            <li>Mall of Scandinavia</li>
+            <li>Stjärntorget 2</li>
+            <li>169 79 Solna</li>
+            <li>+46 (0) 8-586 230 00</li>
+            <li><a href="mailto:mallofscandinavia@jcace.se">mallofscandinavia@jcace.se</a></li>
           </ul>
         </div>
         <div class="footer-navigation" id="footer-navigation">
@@ -70,7 +71,7 @@
                 draggable: isDraggable,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(59.329646, 18.049483),
+                center: new google.maps.LatLng(59.3840636, 17.9653219),
 
                 disableDefaultUI: true,
 
@@ -88,7 +89,7 @@
 
             // Let's also add a marker while we're at it
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(59.329646, 18.049483),
+                position: new google.maps.LatLng(59.3840636, 17.9653219),
                 map: map,
                 title: 'JC Ace'
             });

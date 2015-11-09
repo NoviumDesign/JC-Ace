@@ -126,6 +126,9 @@ update_option( 'thumbnail_crop', 1 );
 
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
 
+add_image_size ( 'brand_top', 1920, 1080);
+add_image_size ( 'fullscreen', 1920, 1080);
+
 function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     return $html;

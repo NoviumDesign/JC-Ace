@@ -19,8 +19,13 @@ get_header(); ?>
 
       <?php while ( have_posts() ) : the_post(); ?>
 
+        <?php
+          $image = get_field('brand-top-image');
+          $thumb = $image['sizes'][ 'brand_top' ];
+        ?>
+
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <header class="entry-header min-height-100" style="background-image: url('<?php echo get_field( "brand-top-image" ); ?>')">
+          <header class="entry-header min-height-100" style="background-image: url('<?php echo $thumb ?>')">
             <div class="container">
               <div class="valign-wrapper min-height-100">
                 <div class="valign height-100">         
@@ -85,21 +90,6 @@ get_header(); ?>
                   </div>
 
                 <?php endif; ?>
-
-              </div>
-
-              <!-- Product grid -->
-
-              <div class="product-grid">
-
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product1-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product2-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product3-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product4-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product5-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product6-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product7-579x805.jpg"></div>
-                <div class="product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2015/11/product8-579x805.jpg"></div>
 
               </div>
 

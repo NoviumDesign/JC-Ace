@@ -3,9 +3,17 @@
 
 get_header(); ?>
 
+<?php
+  $intro_image = get_field('home_first_image');
+  $intro_thumb = $intro_image['sizes'][ 'fullscreen' ];
+
+  $profile_image = get_field('home_second_image');
+  $profile_thumb = $profile_image['sizes'][ 'fullscreen' ];
+?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="intro min-height-100">
+			<div class="intro min-height-100" style="background-image: url('<?php echo $intro_thumb ?>')">
         <div class="container">
           <div class="valign-wrapper height-100">
             <div class="valign">
@@ -18,7 +26,7 @@ get_header(); ?>
 			</div>
 
       <section id="profile">
-        <div class="profile min-height-100 container">
+        <div class="profile min-height-100 container" style="background-image: url('<?php echo $profile_thumb ?>')">
     			<?php while ( have_posts() ) : the_post(); ?>
 
     				<?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -48,26 +56,24 @@ get_header(); ?>
 
         <div class="store-wrap">
           <div class="store-info">
-            <strong>JC(ACE) Concept Store</strong>
+            <strong>JC(ACE) Store</strong>
             <ul>
-              <li>Arenastaden 22</li>
-              <li>187 23 Stockholm</li>
-              <li>08-21 24 229</li>
-              <li><a href="mailto:arenastaden@jc.se">arenastaden@jc.se</a></li>
+              <li>Mall of Scandinavia</li>
+              <li>Stjärntorget 2</li>
+              <li>169 79 Solna</li>
+              <li><a href="mailto:mallofscandinavia@jcace.se">mallofscandinavia@jcace.se</a></li>
             </ul>
             <strong>Opening hours</strong>
             <ul>
-              <li>M-F: 10.00-20.00</li>
-              <li>SA: 10.00-18.00</li>
-              <li>SU: 11.00-16.00</li>
+              <li>Mo-Su: 10am - 8pm</li>
             </ul>
           </div>
           <div class="store-info">
             <strong>Get to the store by public transport</strong>
-            <p>Subway station Solna Centrum or bus station Friends Arena</p>
+            <p>Subway station Solna Centrum or light rail (Tvärbanan) Solna Station.</p>
             <p>
               <strong>Get to the store by car</strong><br>
-              There are lots of parkings slots in connection to Friends Arena. Space can be limited on sport and show events at Friends Arena.
+              There are 3.700 parkings slots in connection to Mall Of Scandinavia
             </p>
           </div>
         </div>
