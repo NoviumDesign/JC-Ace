@@ -91,6 +91,18 @@ get_header(); ?>
 
                 <?php endif; ?>
 
+                <!-- Product grid -->
+                <?php
+                  $third_image = get_field('brand_image_3');
+
+                  if( !empty($third_image) ): ?>
+
+                  <div class="image-full-width">
+                    <img src="<?php echo $third_image['url']; ?>" alt="<?php echo $third_image['alt']; ?>" />
+                  </div>
+
+                <?php endif; ?>
+
               </div>
 
             </div>
