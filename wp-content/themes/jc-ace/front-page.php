@@ -17,8 +17,8 @@ get_header(); ?>
         <div class="container">
           <div class="valign-wrapper height-100">
             <div class="valign">
-              <h1>JC launches JC(ACE)</h1>
-              <span>The no.1 denim destination for a fashionforward lifestyle with the best brands first</span>
+              <h1><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></h1>
+              <span>Another<br> Contemporary Expression<sup>®</sup></span>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ get_header(); ?>
         <h2>Explore our brands</h2>
           <div class="grid-wrap">
       			<?php
-      				$args = array( 'post_type' => 'Brands', 'posts_per_page' => 10 );
+      				$args = array( 'post_type' => 'Brands', 'posts_per_page' => 25, 'orderby' => 'menu_order' );
       				$loop = new WP_Query( $args );
       				while ( $loop->have_posts() ) : $loop->the_post();
       			?>

@@ -112,9 +112,10 @@ function create_posttype() {
         'singular_name' => __( 'Brand' )
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'rewrite' => array('slug' => 'brands'),
       'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes' ),
+      'hierarchical' => false
     )
   );
 }
@@ -134,14 +135,14 @@ function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
     return $html;
 }
 
-// Show posts of 'post', 'page' and 'movie' post types on home page
-add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+// // Show posts of 'post', 'page' and 'movie' post types on home page
+// add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
-function add_my_post_types_to_query( $query ) {
-  if ( is_home() && $query->is_main_query() )
-    $query->set( 'post_type', array( 'page', 'brands' ) );
-  return $query;
-}
+// function add_my_post_types_to_query( $query ) {
+//   if ( is_home() && $query->is_main_query() )
+//     $query->set( 'post_type', array( 'page', 'brands' ) );
+//   return $query;
+// }
 
 // Add support for thumbs
 add_theme_support('post-thumbnails');
