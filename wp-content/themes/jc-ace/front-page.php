@@ -61,7 +61,8 @@ get_header(); ?>
               <li>Mall of Scandinavia</li>
               <li>Stjärntorget 2</li>
               <li>169 79 Solna</li>
-              <li><a href="mailto:mallofscandinavia@jcace.se">mallofscandinavia@jcace.se</a></li>
+              <li>076 - 000 88 49</li>
+              <li><a href="mailto:store110.mos@jc.se">store110.mos@jc.se</a></li>
             </ul>
             <strong>Opening hours</strong>
             <ul>
@@ -73,7 +74,8 @@ get_header(); ?>
             <p>Subway station Solna Centrum or light rail (Tvärbanan) Solna Station.</p>
             <p>
               <strong>Get to the store by car</strong><br>
-              There are 3.700 parkings slots in connection to Mall Of Scandinavia
+              Find us on <a href="https://www.google.se/maps/place/Mall+of+Scandinavia/@59.370555,18.0012526,17z/data=!4m2!3m1!1s0x465f9dc632e678ff:0x4bb453ffd468743e" style="text-decoration:underline;">Google Maps</a>.<br>
+              There are 3.700 parkings slots in connection to Mall Of Scandinavia.
             </p>
           </div>
         </div>

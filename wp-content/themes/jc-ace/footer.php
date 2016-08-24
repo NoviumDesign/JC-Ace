@@ -35,8 +35,8 @@
             <li>Mall of Scandinavia</li>
             <li>Stjärntorget 2</li>
             <li>169 79 Solna</li>
-            <li>+46 (0) 8-586 230 00</li>
-            <li><a href="mailto:mallofscandinavia@jcace.se">mallofscandinavia@jcace.se</a></li>
+            <li>076 - 000 88 49</li>
+            <li><a href="mailto:store110.mos@jc.se">store110.mos@jc.se</a></li>
           </ul>
         </div>
         <div class="footer-navigation" id="footer-navigation">
